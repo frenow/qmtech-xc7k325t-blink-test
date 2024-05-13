@@ -1,0 +1,11 @@
+set_property IOSTANDARD LVCMOS33 [get_ports {led_1}]
+set_property PACKAGE_PIN J26 [get_ports {led_1}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led_2}]
+set_property PACKAGE_PIN H26 [get_ports {led_2}]
+set_property IOSTANDARD LVCMOS33 [get_ports sys_clk]
+set_property IOSTANDARD LVCMOS18 [get_ports sys_rst_n]
+set_property PACKAGE_PIN F22 [get_ports sys_clk]
+set_property PACKAGE_PIN AF9 [get_ports sys_rst_n]
+
+connect_debug_port dbg_hub/clk [get_nets <sys_clk>]
+set_property BITSTREAM.CONFIG.SPI_BUSWIDTH 4 [current_design]
